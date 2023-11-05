@@ -31,12 +31,10 @@ class Picture
       input_line = gets.chomp.to_s
       line_check(input_line, width: width)
 
-      donut_ary << input_line
+      self.donut_ary << input_line
       counter += 1
       puts donut_ary
     end
-    print '１行目：'
-    self.
   end
 
   # ドーナツ数をカウント
