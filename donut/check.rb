@@ -6,7 +6,7 @@ module Check
     return puts "範囲エラー、処理を終了します。#{input}" if input > 100
   end
 
-  def string_check(input)
-    
+  def line_check(input, **hash) # キーワード引数をハッシュとして受け取る
+
   end
 end
