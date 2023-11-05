@@ -20,9 +20,20 @@ class Picture
     # 代入する時はselfが必要、参照する際はいらない。
     print '縦方向のマス数：'
     self.height = gets.chomp.to_i
-    print '横方向のます数：'
+    print '横方向のマス数：'
     self.width  = gets.chomp.to_i
+    
+    counter = 1
+    donut_ary = []
+    while counter <= 5 do
+      print "#{counter}行目："
+      tmp = gets.chomp.to_s
+      donut_ary << 
+      counter += 1
+      puts donut_ary
+    end
     print '１行目：'
+    self.
   end
 
   # ドーナツ数をカウント
