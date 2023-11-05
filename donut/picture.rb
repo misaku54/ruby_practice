@@ -25,11 +25,6 @@ class Picture
     print '１行目：'
   end
 
-  # 入力チェック
-  def check(input)
-
-  end
-
   # ドーナツ数をカウント
   def donut_count
 
