@@ -29,7 +29,7 @@ class Picture
     while counter <= 5 do
       print "#{counter}行目："
       input_line = gets.chomp.to_s
-      # line_check(input_line, height: height, width: width)
+      line_check(input_line, width: width)
 
       donut_ary << input_line
       counter += 1
