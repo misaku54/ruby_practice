@@ -11,7 +11,20 @@ module Check
     input.each_char {|c| raise ArgumentError,  "#または.しか使えません。#{input}" unless c == "#" || c == "."}
   end
 
-  def donut_check(ary)
-    ary
+  def donut_check(donut)
+    target = []
+    
+    donut.each_char.with_index do |c, index|
+      target << index.to_i if c == "."
+    end
+
+    target.each do |t|
+      x = if t - width > 0
+      else 
+        next
+      end 
+      p donut[x-1..x+1]
+    end
+    
   end
 end

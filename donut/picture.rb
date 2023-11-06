@@ -13,6 +13,7 @@ class Picture
   def run
     setup_matrix
     input_picture
+    donut_check(donut)
   end
 
   private
@@ -33,11 +34,11 @@ class Picture
     while counter <= 5 do
       print "#{counter}行目："
       input_line = gets.chomp.to_s
-      line_check(input_line, width: width)
+      # line_check(input_line, width: width)
 
       self.donut = donut + input_line
       counter += 1
-      puts donut_ary
+      puts donut
     end
   end
 
