@@ -1,19 +1,20 @@
 require_relative 'check'
 class Picture
-  attr_accessor :height, :width, :donut
+  attr_accessor :height, :width, :donut_ary, :donut_count
 
   # 初期化
   def initialize
     @height = 0
     @width  = 0
-    @donut = ""
+    @donut_ary = []
+    @donut_count = 0
   end
 
   # 実行部
   def run
     setup_matrix
     input_picture
-    donut_check(donut)
+    donut_check(donut_ary)
   end
 
   private
@@ -31,22 +32,16 @@ class Picture
   # 絵を入力
   def input_picture
     counter = 1
-    while counter <= 5 do
+    while counter <= height do
       print "#{counter}行目："
       input_line = gets.chomp.to_s
-      # line_check(input_line, width: width)
 
-      self.donut = donut + input_line
+      self.donut_ary << input_line
       counter += 1
-      puts donut
     end
   end
 
   # ドーナツ数をカウント
-  def donut_count
-
-  end
-
   include Check
 end
 
