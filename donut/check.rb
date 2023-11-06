@@ -10,4 +10,8 @@ module Check
     raise ArgumentError, "範囲エラー、処理を終了します。#{input}" if input.size > width
     input.each_char {|c| raise ArgumentError,  "#または.しか使えません。#{input}" unless c == "#" || c == "."}
   end
+
+  def donut_check(ary)
+    ary
+  end
 end

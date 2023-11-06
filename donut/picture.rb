@@ -1,17 +1,18 @@
 require_relative 'check'
 class Picture
-  attr_accessor :height, :width, :donut_ary
+  attr_accessor :height, :width, :donut
 
   # 初期化
   def initialize
     @height = 0
     @width  = 0
-    @donut_ary = []
+    @donut = ""
   end
 
   # 実行部
   def run
     setup_matrix
+    input_picture
   end
 
   private
@@ -34,7 +35,7 @@ class Picture
       input_line = gets.chomp.to_s
       line_check(input_line, width: width)
 
-      self.donut_ary << input_line
+      self.donut = donut + input_line
       counter += 1
       puts donut_ary
     end
