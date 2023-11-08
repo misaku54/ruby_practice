@@ -13,10 +13,13 @@ class Gate
   end
 
   private 
-  
+
   # インプット路線、駅の数
   def setup
-
+    print '路線の数:'
+    self.route_c   = gets.chomp.to_i
+    print '駅の数:'
+    self.station_c = gets.chomp.to_i
   end
 
   # インプット運賃料金
