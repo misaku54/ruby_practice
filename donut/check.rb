@@ -11,6 +11,7 @@ module Check
     input.each_char {|c| raise ArgumentError,  "#または.しか使えません。#{input}" unless c == "#" || c == "."}
   end
 
+  # .の座標を取得する。
   def donut_check(donut_ary)
     target = []
 
@@ -26,6 +27,7 @@ module Check
 
   private
   
+  # 取得した.座標をもとに.の上下の配列をチェックし、ドーナツ数をカウントする。
   def donut_counter(tgt)
     tgt.each do |t|
       x = t[:x]

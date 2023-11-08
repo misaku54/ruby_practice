@@ -45,6 +45,7 @@ class Picture
   include Check
 end
 
+# 実行
 picture = Picture.new
 picture.run
 
