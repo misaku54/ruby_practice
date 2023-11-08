@@ -9,7 +9,7 @@ class Gate
 
   # 実行
   def run
-
+    setup
   end
 
   private 
@@ -32,3 +32,5 @@ class Gate
 
   end
 end
+
+# 実行部
