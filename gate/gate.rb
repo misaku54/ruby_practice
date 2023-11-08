@@ -21,15 +21,21 @@ class Gate
     self.route_c   = gets.chomp.to_i
     print '駅の数:'
     self.station_c = gets.chomp.to_i
+    input_fee
   end
 
   # インプット運賃料金
   def input_fee
     counter = 1
     while counter <= route_c do
+      print "#{counter}路線目:"
       tmp = gets.chomp.split.map(&:to_i)
       self.fee_ary << tmp
     end
+  end
+
+  def setup_goal_route_c
+    goal_c = gets.chomp.to_i   
   end
 
   # 運賃計算
