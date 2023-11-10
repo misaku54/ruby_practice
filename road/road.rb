@@ -9,6 +9,7 @@ class Road
   def run
     input_car_count
     input_car_num_ary
+    lap_count
   end
 
   def input_car_count
@@ -25,6 +26,12 @@ class Road
       i += 1
     end
     p car_num_ary
+  end
+
+  # 周回をカウント
+  def lap_count
+    max_car_num = car_num_ary.max
+    p max_car_num
   end
 end
 
