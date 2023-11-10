@@ -14,6 +14,7 @@ class Road
   def input_car_count
     print '教習車の数：'
     self.car_count = gets.chomp.to_i
+    p car_count
   end
 
   def input_car_num_ary
@@ -23,5 +24,9 @@ class Road
       self.car_num_ary.push(gets.chomp.to_i)
       i += 1
     end
+    p car_num_ary
   end
 end
+
+road = Road.new
+road.run
