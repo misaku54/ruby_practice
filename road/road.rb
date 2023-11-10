@@ -12,6 +12,8 @@ class Road
     lap_count
   end
 
+  private 
+
   def input_car_count
     # print '教習車の数：'
     self.car_count = gets.chomp.to_i
@@ -31,26 +33,28 @@ class Road
   # 周回をカウント
   def lap_count
     max_car_num = car_num_ary.max
+    min_car_num = car_num_ary.min
     l_count = 0 
-    # p max_car_num
 
-    while true do
-      min_car_num = car_num_ary.min
-
-      break if min_car_num == max_car_num 
+    # 配列内の車番の最大値と最小値が同じになるまでループ
+    while min_car_num != max_car_num  do 
       tmp = car_num_ary.shift
-
-      # 取り出した値が最小番号なら何もせず次のループへ
-      next if tmp == min_car_num
-
+      
+      case tmp
+      # 取り出した値が最小番号なら最小番号を更新し次のループへ
+      when min_car_num
+        min_car_num = car_num_ary.min
+        next
       # 取り出した値が最大番号ならカウント＋１してプッシュする
-      if tmp == max_car_num
-        car_num_ary.push(tmp)
+      when max_car_num
         l_count += 1
-      else 
-        # 取り出した値が最大番号、最小番号でもないならそのままプッシュする
+        car_num_ary.push(tmp)
+      # 取り出した値が最大番号、最小番号でもないならそのままプッシュする
+      else
         car_num_ary.push(tmp)
       end
+
+      min_car_num = car_num_ary.min
     end
     p l_count
   end
