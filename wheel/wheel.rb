@@ -24,4 +24,13 @@ class Wheel
       i += 1
     end
   end
+
+  def input_group_count
+    j = 1
+    while j <= group_num do
+      print "#{j}組目のグループの人数："
+      self.group_count_ary << gets.chomp.to_i
+      j += 1
+    end
+  end
 end
