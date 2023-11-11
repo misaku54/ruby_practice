@@ -24,5 +24,4 @@ class NumberSeq
 
     p numbers
   end
-
 end
