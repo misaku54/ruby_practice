@@ -18,8 +18,6 @@ class NumberSeq
     self.numbers = gets.chomp.split.map(&:to_i)
 
     # 要素数が超えていたら例外を出す。
-    if numbers.size > element_limit
-      raise
-    end
+    raise if numbers.size > element_limit
   end
 end
