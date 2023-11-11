@@ -1,8 +1,13 @@
 require_relative 'number_seq'
 require_relative 'query_calc'
-# num_seq = NumberSeq.new
-# num_seq.run
-# p num_seq.numbers
 
+# インスタンス生成
+num_seq = NumberSeq.new
 query = QueryCalc.new
+
+# 入力処理
+num_seq.run
 query.run
+
+# 出力処理
+query.calc(num_seq.numbers)
