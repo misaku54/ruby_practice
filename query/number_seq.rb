@@ -14,14 +14,12 @@ class NumberSeq
   private 
 
   def input_ary
-    ele_count  = gets.chomp.to_i
-    
-    i = 0
-    while i < ele_count do
-      tmp = gets.chomp.to_i
-      numbers.push(tmp)
-    end
+    element_limit  = gets.chomp.to_i
+    self.numbers = gets.chomp.split.map(&:to_i)
 
-    p numbers
+    # 要素数が超えていたら例外を出す。
+    if numbers.size > element_limit
+      raise
+    end
   end
 end
