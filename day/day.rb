@@ -1,3 +1,3 @@
 class Day
-  attr_accessor :Day
+  attr_accessor :date
 end
