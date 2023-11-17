@@ -1,3 +1,1 @@
-class Day
-  attr_accessor :date
-end
+ary = [[1,4],[2,3],[5,7],[8,15]]
