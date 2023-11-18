@@ -25,9 +25,11 @@ kinmu_ary.each.with_index(0) do |ar, index|
     next
   end
 
+  # 順番に増えていれば勤務カウントを＋１
   if ar == mae_ar + 1
     kinmu_count += 1
     next
+  # そうでなければ、勤務カウントを配列に格納し、リセットする。
   else
     max_kinmu_ary << kinmu_count
     kinmu_count = 0
