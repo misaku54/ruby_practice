@@ -15,3 +15,15 @@ s_c = s.count("C")
 s_p = s.count("P")
 
 win_max = 0
+
+(m / 5).downto(0) do |pa|
+  ch = (m - 5 * pa) / 2
+  gu = n - pa - ch
+
+  break if gu.negative?
+  next if m != 5 * pa + 2 * ch
+
+  win_max = max(win_max, min(s_c, gu) + min(s_p, ch) + min(s_g, pa))
+end
+
+puts win_max
