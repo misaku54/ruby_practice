@@ -10,5 +10,29 @@ n.times do
 end
 
 p tmp_ary
-kinmu_ary = tmp_ary.uniq
+kinmu_ary = tmp_ary.uniq.sort
 p kinmu_ary
+
+
+mae_ar = 0
+kinmu_count = 0
+max_kinmu_ary = []
+
+
+kinmu_ary.each.with_index(0) do |ar, index|
+  if index == 0
+    kinmu_count += 1
+    next
+  end
+
+  if ar == mae_ar + 1
+    kinmu_count += 1
+    next
+  else
+    max_kinmu_ary << kinmu_count
+    kinmu_count = 0
+  end
+  ar
+
+  mae_ar = ar
+end
