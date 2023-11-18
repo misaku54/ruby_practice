@@ -7,7 +7,11 @@ ary_ar = [ary1, ary2, ary3]
 w = 4
 
 
-
+ary_ar.each do |ar|
+  ar.each do |a|
+    
+  end
+end
 
 ary1.each.with_index(0) do |ar, index|
   tmp_ar = [ary2[index - 1], ary2[index] ,ary2[index + 1]]
