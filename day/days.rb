@@ -11,7 +11,7 @@ n.times do
 end
 
 # p tmp_ary
-kinmu_ary = tmp_ary.sort
+kinmu_ary = tmp_ary.uniq.sort
 # p kinmu_ary
 
 
@@ -33,21 +33,18 @@ kinmu_ary.each.with_index(0) do |ar, index|
     next
   end
 
-  if ar == mae_ar
-    mae_ar = ar.to_i
-    next
-  end
-
   # 順番に増えていれば勤務カウントを＋１
-  if ar == mae_ar + 1
+  ca = mae_ar + 1
+  if ar == ca
     kinmu_count += 1
     mae_ar = ar.to_i
     next
   # そうでなければ、勤務カウントを配列に格納し、リセットする。
+  else
+    max_kinmu_ary << kinmu_count
+    kinmu_count = 1
+    mae_ar = ar.to_i
   end
-  max_kinmu_ary << kinmu_count
-  kinmu_count = 1
-  mae_ar = ar.to_i
 end
 
 puts max_kinmu_ary.max
