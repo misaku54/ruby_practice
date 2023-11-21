@@ -5,7 +5,7 @@ out_ary = []
 # 盤面格納
 h.times do
   tmp = gets.chomp.split('')
-  raise if tmp.size > n 
+  raise if tmp.size > w
   banmen_ary << tmp
 end
 
