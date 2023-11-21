@@ -1,18 +1,18 @@
-N = gets.chomp.to_i
+# N = gets.chomp.to_i
 
-ary = Array.new
-ary = gets.chomp.split.map(&:to_i)
+# ary = Array.new
+# ary = gets.chomp.split.map(&:to_i)
 
-n = gets.chomp.to_i
+# n = gets.chomp.to_i
 
-tmp_ary = Array.new
-n.times do  
-  tmp_ary << gets.chomp.split.map(&:to_i)
-end
+# tmp_ary = Array.new
+# n.times do  
+#   tmp_ary << gets.chomp.split.map(&:to_i)
+# end
 
-tmp_ary.each do |ar|
-  puts ary[ar[0]..ar[1]].sum
-end
+# tmp_ary.each do |ar|
+#   puts ary[ar[0]..ar[1]].sum
+# end
 
 
 # 素直に区間の始まりと終わりを全探索して実装すると、計算量が O(N^2) となってしまい実行時間制限に間に合いません。
