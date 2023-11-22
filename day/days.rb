@@ -14,7 +14,6 @@ end
 kinmu_ary = tmp_ary.uniq.sort
 # p kinmu_ary
 
-
 mae_ar = 0
 kinmu_count = 0
 max_kinmu_ary = []
