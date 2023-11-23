@@ -1,7 +1,7 @@
 class Array
-  ary = []
+  ary = [1,2,3,4]
 
   ary.each do |ar|
-    
+    puts ar
   end
 end
