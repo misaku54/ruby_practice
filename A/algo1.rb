@@ -9,4 +9,7 @@ end
 
 ans = m.slice(0,t).inject(:+)
 tmp = ans
+(n-t).times do |i|
+  tmp += m[t+i]
 
+end
