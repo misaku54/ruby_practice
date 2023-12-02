@@ -1,3 +1,5 @@
+
+# しゃくとり法
 strs = gets.split(' ')
 t, n = strs[0].to_i, strs[1].to_i
 
