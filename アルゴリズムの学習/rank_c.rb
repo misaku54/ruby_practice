@@ -18,7 +18,6 @@ out_ary.each do |ar|
   puts ar
 end
 
-# 解答
 # h, w, n = gets.split.map(&:to_i)
 # board = h.times.map { gets.chomp }
 

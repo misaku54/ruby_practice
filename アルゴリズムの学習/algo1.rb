@@ -1,4 +1,4 @@
-# 論理和での求め方
+# 累積和での求め方
 strs = gets.split(' ')
 t, n = strs[0].to_i, strs[1].to_i
 m = Array.new(n)
